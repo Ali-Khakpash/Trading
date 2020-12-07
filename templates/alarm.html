@@ -1,0 +1,12 @@
+
+<h2>Set Alarms</h2>
+
+{{ res1 }}
+{{ res2 }}
+
+<form method="post" action="{{ 'alarm' }}">
+    Send me Emails when <span style="color: red">BTC</span> goes
+    <span style="color: #177199">above</span> the price of <input name="above-p">
+    and goes <span style="color: #177199">below</span> the price of <input name="below-p">
+    <button type="submit" value="Send">Send</button>
+</form>

@@ -1,0 +1,82 @@
+import asyncio
+import requests
+from flask_mail import Mail, Message
+from config import config
+
+# celery
+from tasks import pr1, pr2
+
+from flask import (Flask, render_template, make_response, request)
+
+app = Flask(__name__, template_folder="templates")
+app.config.from_object(config['development'])
+mail = Mail(app)
+
+
+@app.route('/')
+def hello():
+    # asyncio.run(price())
+    result1 = pr1.delaycountdown=60()
+    result2 = pr2.delay()
+    return render_template('alarm.html', res1=result1.wait(), res2=result2.wait())
+
+
+@app.route('/alarm', methods=['POST'])
+def alarm():
+    global above_price, below_price
+    above_price = request.values.get('above-p')
+    below_price = request.values.get('below-p')
+
+    print('ass')
+
+    asyncio.run(main())
+
+    return make_response(above_price)
+
+
+async def get_last_price():
+    while (True):
+        r = requests.get('https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD')
+        res = r.json()
+        global last_price
+        last_price = res[0][7]
+        print(last_price)
+        await asyncio.sleep(3)
+
+
+async def send_alarm():
+    above = True
+    below = True
+    doing = True
+    await asyncio.sleep(5)
+    while doing:
+        if 'last_price' and 'above_price' and 'below_price' in globals():
+            if above:
+                if last_price >= int(above_price):
+                    msg = Message("Hello" + "BTC goes above" + above_price,
+                                  sender="ali.khakpash@gmail.com",
+                                  recipients=["enemyfront45@gmail.com"])
+                    mail.send(msg)
+                    above = False
+            elif last_price <= int(below_price):
+                if below:
+                    msg = Message("Hello" + "BTC goes below" + below_price,
+                                  sender="ali.khakpash@gmail.com",
+                                  recipients=["enemyfront45@gmail.com"])
+                    mail.send(msg)
+                    below = False
+        if below == False and above == False:
+            doing = False
+        await asyncio.sleep(3)
+
+
+async def main():
+    await asyncio.gather(send_alarm())
+
+
+async def price():
+    await asyncio.gather(get_last_price())
+
+
+if __name__ == '__main__':
+    app.run()
