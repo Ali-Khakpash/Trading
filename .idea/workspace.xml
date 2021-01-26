@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b95f112-29af-48e8-9e8f-753d2a458881" name="Default Changelist" comment="" />
+    <list default="true" id="9b95f112-29af-48e8-9e8f-753d2a458881" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trader.py" beforeDir="false" afterPath="$PROJECT_DIR$/trader.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1l4HJbYfMrEWuSm6MI2EypI2S8e" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -16,7 +23,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../flasky-restApi-app/config.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/charts-indicators" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager">
@@ -75,6 +82,8 @@
       <workItem from="1607097106393" duration="10023000" />
       <workItem from="1607117352239" duration="374000" />
       <workItem from="1607176356684" duration="12076000" />
+      <workItem from="1611514031218" duration="520000" />
+      <workItem from="1611514840171" duration="82000" />
     </task>
     <servers />
   </component>
@@ -86,9 +95,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="381" y="201" width="660" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1299.741@67.27.1299.741" timestamp="1607176647499" />
-    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607009789736">
+    <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1611514920093">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state x="499" y="154" key="FileChooserDialogImpl/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1611514920093" />
     <state x="499" y="154" width="424" height="484" key="FileChooserDialogImpl/67.27.1299.741@67.27.1299.741" timestamp="1607009789736" />
     <state x="67" y="228" width="1289" height="337" key="FileDocumentManager.FileCacheConflict" timestamp="1607004431908">
       <screen x="67" y="27" width="1299" height="741" />
@@ -98,9 +108,10 @@
       <screen x="67" y="27" width="1299" height="741" />
     </state>
     <state x="205" y="31" key="SettingsEditor/67.27.1299.741@67.27.1299.741" timestamp="1607076340322" />
-    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1607176597258">
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1611514844001">
       <screen x="67" y="27" width="1299" height="741" />
     </state>
+    <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741/1366.0.1920.1080@67.27.1299.741" timestamp="1611514844001" />
     <state x="372" y="224" key="com.intellij.ide.util.TipDialog/67.27.1299.741@67.27.1299.741" timestamp="1607176597258" />
     <state x="379" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1607076332122">
       <screen x="67" y="27" width="1299" height="741" />

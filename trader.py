@@ -42,7 +42,7 @@ def send_alarm_email(above_price,below_price):
         below = True
 
         while (doing):
-            time.sleep(2)
+            time.sleep(30)
             r = requests.get('https://api-pub.bitfinex.com/v2/tickers?symbols=tBTCUSD')
             res = r.json()
             global last_price
